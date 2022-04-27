@@ -17,7 +17,7 @@ vars_2_group_between <- toString(between_sub_vars)
 dataset$rt <- dataset[[RT_col]] 
 dataset$correct <- dataset[[Accuracy_col]]
   
-  dataset %>% 
+  df <- dataset %>% 
   group_by({vars_2_group}) %>%
   mutate(new_DV_col = (sum(correct, na.rm = T) / length(rt)*100)) %>%
   
@@ -50,5 +50,5 @@ dataset$correct <- dataset[[Accuracy_col]]
   ungroup()%>%
   #adjusted scores
   mutate(rt_adj = rt + adj_factRT) 
-  return(dataset)
+  return(df)
 }
