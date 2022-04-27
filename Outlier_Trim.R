@@ -1,5 +1,7 @@
 #Outlier_Trim_Function
 
+#ENSURE ONLY CORRECT TRIALS
+
 #subject is subject column
 #between_sub_vars is list of between subject vars. Example -- c("explicit", "probability")
 #within_sub_vars is list of within subject vars. Example -- c("word_associat_size", "size_rew_font", "size_rew_shape", "StroopCond", "shaperewval", "block")
@@ -14,7 +16,7 @@ vars_2_group_between_ID <- paste(ID, toString(between_sub_vars) )
 vars_2_group_between <- toString(between_sub_vars)
 
 
-dataset$rt <- dataset[[DV_col]] 
+dataset$dv <- dataset[[DV_col]] 
 
   df <- dataset %>% 
   group_by({vars_2_group}) %>%
