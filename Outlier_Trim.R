@@ -7,7 +7,7 @@
 #RT_col is a column with RTs. Example -- 'rt'
 #SD_cutoff is the number of SDs for outlier trim.
 
-outdt  <- function(dataset, ID, between_sub_vars, within_sub_vars, Accuracy_col, RT_col, SD_cutoff) {
+outliertrim  <- function(dataset, ID, between_sub_vars, within_sub_vars, Accuracy_col, RT_col, SD_cutoff) {
 
 vars_2_group <- paste(ID, toString(between_sub_vars), toString(within_sub_vars), sep = ", ")
 vars_2_group_between_ID <- paste(ID, toString(between_sub_vars) )
@@ -50,4 +50,5 @@ dataset$correct <- dataset[[Accuracy_col]]
   ungroup()%>%
   #adjusted scores
   mutate(rt_adj = rt + adj_factRT) 
+  return(dataset)
 }
