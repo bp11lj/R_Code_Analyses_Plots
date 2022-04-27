@@ -49,5 +49,6 @@ dataset$dv <- dataset[[DV_col]]
   ungroup()%>%
   #adjusted scores
   mutate(dv_adj = dv + adj_factdv) 
+  print(mean(df$percaccept))
   return(df)
 }
