@@ -3,7 +3,6 @@
 #within_sub_vars is list of within subject vars. Example -- c("word_associat_size", "size_rew_font", "size_rew_shape", "StroopCond", "shaperewval", "block")
 #Accuracy_col is a column with whether trial is accurate or not. Accurate is 1 and incorrect is 0. Example -- 'correct'
 #DV_col is a column with DV. Example -- 'rt'
-#SD_cutoff is the number of SDs for outlier trim.
 
 Within_Correct  <- function(dataset, ID, between_sub_vars, within_sub_vars,  DV_col) {
 
