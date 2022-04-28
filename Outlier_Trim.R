@@ -31,8 +31,6 @@ dataset$dv <- dataset[[DV_col]]
   mutate(endtrials = length(dv)) %>%
   mutate(percaccept = ((endtrials-starttrials)/starttrials)*100) %>% #percent excluded with trim
   
-  #get grand mean for each between subjects group
-  ungroup()
   
   print(mean(df$percaccept))
   return(df)
