@@ -32,6 +32,6 @@ dataset$dv <- dataset[[DV_col]]
   mutate(percaccept = ((endtrials-starttrials)/starttrials)*100) %>% #percent excluded with trim
   
   
-  print(mean(df$percaccept))
+  #print(mean(df$percaccept))
   return(df)
 }
