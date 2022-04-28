@@ -28,8 +28,8 @@ dataset$dv <- dataset[[DV_col]]
   filter(dv <= (SD_cutoff*stdev)+avg) %>% 
   filter(dv >= avg - (SD_cutoff*stdev)) %>%
       
-  mutate(endtrials = length(dv)) %>%
-  mutate(percaccept = ((endtrials-starttrials)/starttrials)*100) %>% #percent excluded with trim
+  mutate(endtrials = length(dv)) 
+ # mutate(percaccept = ((endtrials-starttrials)/starttrials)*100) %>% #percent excluded with trim
   
   
   #print(mean(df$percaccept))
