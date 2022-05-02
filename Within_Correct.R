@@ -3,8 +3,10 @@
 #DV_col is a column with DV. Example -- 'rt'
 
 Within_Correct  <- function(dataset, subject, DV_col, ...) {
-  
+
  subject <- enquo(subject)
+DV_col <- enquo(DV_col)
+
 
   df <- dataset %>%
     #group by between subject vars
