@@ -11,12 +11,12 @@ DV_col <- enquo(DV_col)
   df <- dataset %>%
     #group by between subject vars
   group_by(...) %>%
-  mutate(grndmeand = mean(!!DV_col, na.rm = T)) %>%
+  mutate(grndmeand = mean(dv, na.rm = T)) %>%
     #group by ID
   group_by(!!subject) %>%
 
   #average over conditions and get average per subj
-  mutate(condmean_perpar = mean(!!DV_col, na.rm = T)) %>%
+  mutate(condmean_perpar = mean(dv, na.rm = T)) %>%
 
   #make adjustment factor to add to all scores
   mutate(adj_fact = grndmeand - condmean_perpar) %>%
