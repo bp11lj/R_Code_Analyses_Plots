@@ -1,8 +1,7 @@
-#subject is subject column
+#make subject column called subject and dv column called dv
 #between_sub_vars is list of between subject vars. Have in the dots
-#DV_col is a column with DV. Example -- 'rt'
 
-Within_Correct  <- function(dataset, subject, DV_col, ...) {
+Within_Correct  <- function(dataset, ...) {
 
 
   df <- dataset %>%
